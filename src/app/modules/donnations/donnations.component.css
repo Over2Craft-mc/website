@@ -1,0 +1,56 @@
+main {
+  margin-top: 10vh;
+  margin-left: 25vw;
+  margin-right: 10vw;
+}
+
+@media only screen and (max-width : 1224px) {
+  main {
+    margin-left: 10vw;
+  }
+}
+
+h1 {
+  margin-top: 5vh;
+  font-family: var(--font-family-secondary);
+}
+
+.donate {
+  display: inline-block;
+  position: fixed;
+  top: 20vh;
+  left: 3vw;
+  text-decoration: none;
+  background: var(--secondary-color);
+  border-radius: 4px;
+  color: var(--font-color-light);
+  padding: 15px 25px 15px 25px;
+  text-shadow: 1px 1px 5px #666;
+  -webkit-transition: all 800ms;
+  transition: all 800ms;
+}
+
+@media only screen and (max-width : 1224px) {
+  .donate {
+    position: relative;
+    top: inherit;
+    left: inherit;
+  }
+}
+
+.donate:after {
+  border-left: 2px solid var(--font-color-light);
+  color: var(--font-color-light);
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  padding-left: 15px;
+  margin-left: 15px;
+  -webkit-transition: all 600ms 200ms;
+  transition: all 600ms 200ms;
+}
+
+.donate:hover:after {
+  border-left: 1px solid #008260;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+}
