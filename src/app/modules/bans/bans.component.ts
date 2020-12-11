@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-bans',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BansComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private titleService:Title) {
+    this.titleService.setTitle('Over2Craft - Liste des sanctions  (bans)');
+  }
   ngOnInit(): void {
   }
 
