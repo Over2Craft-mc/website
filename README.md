@@ -1,10 +1,11 @@
-# Déploiement
+# Deploy with SSR
 
+Port `4000` required. Change it in `docker-compose.yml`
 ```
 docker-compose build && docker-compose up -d
 ```
 
-# O2c
+# O2c 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
