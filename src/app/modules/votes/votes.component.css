@@ -1,0 +1,129 @@
+@media only screen and (max-width : 1224px) {
+  main {
+    margin-top: 0;
+  }
+}
+
+a {
+  color: var(--font-color-light);
+}
+
+/**
+ Votes
+*/
+#vote-get-gift {
+  margin-left: 5vh;
+  margin-right: 5vh;
+}
+
+#vote-get-gift-text {
+ padding-left: 30px;
+}
+
+#vote-get-gift-text h2 {
+  margin-left: -30px;
+}
+
+#vote-get-gift iframe {
+  width: 100%;
+  border-radius: 15px;
+}
+
+#vote-get-gift .input-text, .submit-btn {
+  border: solid;
+  font-size: calc(var(--font-size) + 2px);
+  color: var(--font-color-light);
+  font-family: var(--font-family-primary);
+  background: transparent;
+  border: solid 3px;
+  border-color: var(--font-color-light);
+}
+
+#vote-get-gift .input-text {
+  border-radius: 15px 0 0 15px;
+  border-right: 0;
+  padding-left: 1rem;
+  outline: 0;
+}
+
+#vote-get-gift .submit-btn {
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  border-radius: 0 15px 15px 0;
+  border-left: 0;
+  cursor: pointer;
+}
+
+#vote-get-gift .input-text:focus {
+  outline: 0;
+}
+
+#vote-get-gift .submit-btn:focus {
+  outline: 0;
+}
+
+#vote-top {
+  background-image: var(--minecraft-background);
+  margin-top: -150px;
+  padding-bottom: 50px;
+}
+
+#vote-top div {
+  text-align: center;
+}
+
+#vote-top div table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#vote-img {
+  text-align: center;
+}
+
+#vote-img > img {
+  max-height: 70vh;
+  margin-bottom: -300px;
+}
+
+/**
+ Table
+ */
+
+#vote-top-all, #vote-top-month {
+  max-height: 60vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#vote-top-all::-webkit-scrollbar, #vote-top-month::-webkit-scrollbar {
+  display: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: calc(var(--font-size) - 2px);
+}
+
+main > div {
+  margin-top: 10vh;
+  word-break: break-word;
+}
+
+td, th {
+  border: 1px solid var(--font-color-light);
+  padding: 8px;
+}
+
+tr {
+  background-color: var(--secondary-color);
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background: var(--minecraft-background);
+  color: var(--font-color-light);
+}

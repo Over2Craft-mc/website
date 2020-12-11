@@ -1,0 +1,298 @@
+/**
+Tout droit réservé © Over2Craft 2020-2021
+Mail : contact@over2craft.com
+*/
+
+/**
+* Commons variables
+*/
+body {
+  --primary-color: #232741;
+  --secondary-color: #7289DA;
+  --font-family-primary: 'MinecraftiaRegular', 'serif';
+  --font-family-secondary: 'Trade Gothic LT W01 Cn No-_18', sans-serif;
+  --font-color-light: white;
+  --font-size: 14px;
+  --minecraft-background: url("./assets/images/bg-wool-dark.png");
+  --minecraft-background-top: url("./assets/images/trans-bottom-darkwool.png");
+  --minecraft-background-bottom: url("./assets/images/trans-top-darkwool.png");
+}
+
+
+/**
+ Loading screen
+ */
+#loading-overlay {
+  background: var(--primary-color);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+}
+
+#loading-overlay .wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loading-overlay .text {
+  color: var(--font-color-light);
+  font-size: calc(var(--font-size) + 3px);
+  font-family: var(--font-family-primary);
+  display: inline-block;
+  margin-left: 5px;
+}
+#loading-overlay .bounceball {
+  position: relative;
+  display: inline-block;
+  height: 37px;
+  width: 15px;
+}
+#loading-overlay .bounceball:before {
+  margin-left: -10px;
+  position: absolute;
+  content: '';
+  display: block;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--font-color-light);
+  transform-origin: 50%;
+  animation: bounce 500ms alternate infinite ease;
+}
+
+#loading-overlay .minimal-info {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: opacity 0s 1s ease;
+  -moz-transition: opacity 0s 1s ease;
+  -o-transition: opacity 0s 1s ease;
+  transition: opacity 0s 1s ease;
+}
+
+#loading-overlay:hover .minimal-info {
+  opacity: 1;
+}
+
+#loading-overlay .minimal-info a {
+  display: inline;
+  color: var(--font-color-light);
+  font-size: calc(var(--font-size) - 4px);
+  font-family: var(--font-family-primary);
+}
+
+@keyframes bounce {
+  0% {
+    top: 30px;
+    height: 5px;
+    border-radius: 60px 60px 20px 20px;
+    transform: scaleX(2);
+  }
+  35% {
+    height: 15px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+  100% {
+    top: 0;
+  }
+}
+
+/**
+* Commons property
+*/
+body {
+  margin:0;
+  font-size: var(--font-size);
+  color: var(--font-color-light);
+  font-family: var(--font-family-primary);
+  background: var(--primary-color);
+}
+
+h1 {
+  margin: 0px;
+  padding: 0.3rem;
+}
+
+.hr-minecraft {
+  display: block;
+  border: 0;
+  margin: 20px 0 20px 0;
+}
+
+.hr-minecraft .top {
+  background-image: var(--minecraft-background-top);
+  height: 100px;
+  display: block;
+  background-position-x: -815px;
+  background-repeat: repeat-x!important;
+  width: 100%;
+  margin-bottom: -1px;
+  margin-top: 50px;
+}
+
+.hr-minecraft .middle {
+  background-image: var(--minecraft-background);
+  width: 100%;
+  height: 100px;
+  background-repeat: repeat-x;
+}
+
+.hr-minecraft .bottom {
+  background-image: var(--minecraft-background-bottom);
+  height: 100px;
+  display: block;
+  background-position-x: -710px;
+  background-repeat: repeat-x!important;
+  width: 100%;
+  margin-top: -1px;
+  margin-bottom: 50px;
+}
+
+/**
+* Commons class
+*/
+.display-none {
+  display: none;
+}
+
+/**
+* Scrollbar
+*/
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border: 0 none #ffffff;
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--secondary-color);
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--secondary-color);
+}
+::-webkit-scrollbar-track {
+  background: #232741;
+  border: 0 none #862323;
+  border-radius: 0;
+}
+::-webkit-scrollbar-track:hover {
+  background: #232741;
+}
+::-webkit-scrollbar-track:active {
+  background: #232741;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/**
+  Grid
+*/
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: center;
+}
+
+
+@media only screen and (max-width : 1224px) {
+  .row-small-device {
+    flex-direction: column;
+  }
+
+  .row-small-device > .col-1, .row-small-device > .col-2, .row-small-device > .col-3, .row-small-device > .col-4, .row-small-device > .col-5, .row-small-device > .col-6, .row-small-device > .col-7, .row-small-device > .col-8, .row-small-device > .col-9, .row-small-device > .col-10, .row-small-device > .col-11, .row-small-device > .col-12 {
+    margin-bottom: 70px;
+  }
+}
+
+.col-1 {
+  flex-basis: 8%;
+  flex-grow: 1;
+  display: block;
+}
+
+.col-2 {
+  flex-basis: 16%;
+  flex-grow: 1;
+  display: block;
+}
+
+.col-3 {
+  flex-basis: 24%;
+  flex-grow: 1;
+  display: block;
+}
+
+.col-4 {
+  flex-basis: 32%;
+  flex-grow: 1;
+  display: block;
+}
+
+.col-5 {
+  flex-basis: 40%;
+  flex-grow: 1;
+  display: block;
+}
+
+.col-6 {
+  flex-basis: 48%;
+  flex-grow: 1;
+  display: block;
+}
+
+.col-7 {
+  flex-basis: 56%;
+  flex-grow: 1;
+  display: block;
+}
+
+.col-8 {
+  flex-basis: 64%;
+  flex-grow: 1;
+  display: block;
+}
+
+.col-9 {
+  flex-basis: 72%;
+  flex-grow: 1;
+  display: block;
+}
+
+.col-10 {
+  flex-basis: 80%;
+  flex-grow: 1;
+  display: block;
+}
+
+.col-11 {
+  flex-basis: 88%;
+  flex-grow: 1;
+  display: block;
+}
+
+.col-12 {
+  flex-basis: 96%;
+  flex-grow: 1;
+  display: block;
+}

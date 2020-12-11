@@ -1,0 +1,71 @@
+<main>
+  <div id="vote-get-gift" class="row">
+    <div class="col-7" id="vote-get-gift-text">
+      <div>
+        <h2>Etape 1 : Votez pour Over2Craft</h2>
+        <p>Cliquez sur le bouton "voter pour Over2Craft" dans l'apperçu ci-desssous. Si l'apperçu ne fonctionne pas, rendez-vous
+          <a target="_blank" href="https://www.serveurs-minecraft.org/vote.php?id=9107#form_vote">ici</a></p>
+        <iframe src="https://www.serveurs-minecraft.org/vote.php?id=9107#form_vote" frameborder="0" scrolling="no"></iframe>
+      </div>
+      <div>
+        <h2>Etape 2 : Obtenir votre récompense en Freebuild</h2>
+        <form (submit)="vote($event)" class="row row-without-warp">
+          <input type="text" id="player" class="input-text col-10" placeholder="pseudo">
+          <button type="submit" class="submit-btn col-2" title="Obtenir ma récompense"><i class="fas fa-check"></i></button>
+        </form>
+        <p id="vote-response"></p>
+      </div>
+    </div>
+
+    <div class="col-5" id="vote-img" >
+      <img src="assets/images/votes.png" alt="personnage minecraft">
+    </div>
+  </div>
+
+  <div class="hr-minecraft">
+    <div class="top"></div>
+    <div class="middle"></div>
+    <div class="bottom"></div>
+  </div>
+
+  <div class="row row-small-device" id="vote-top">
+    <div class="col-6" id="vote-top-month">
+      <h2>Classement de vote par mois sur le Freebuild</h2>
+      <table>
+        <thead>
+        <tr>
+          <th>Position</th>
+          <th>Pseudo</th>
+          <th>Montant</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of topVoteMonthly | keyvalue: keyDescOrder; let i=index">
+          <td>#{{i+1}}</td>
+          <td>{{item.key}}</td>
+          <td>{{item.value}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-6" id="vote-top-all">
+      <h2>Classement de vote total sur le Freebuild</h2>
+      <table>
+          <thead>
+          <tr>
+            <th>Position</th>
+            <th>Pseudo</th>
+            <th>Montant</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of topVote | keyvalue: keyDescOrder; let i=index">
+            <td>#{{i+1}}</td>
+            <td>{{item.key}}</td>
+            <td>{{item.value}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,36 @@
+<div id="particles-js" style="background-image: url('./assets/images/02C.png');"></div>
+
+<div class="spacing"></div>
+
+<div id="ip-address" class="">
+  <span (click)="openTuto()" class="arrow">
+    <span id="ip-address-text">
+      Jouez maintenant en {{app.minecraftVersion}}<br>
+      <span>
+        <i class="fa fa-gamepad" aria-hidden="true"></i> over2craft.fr
+      </span>
+    </span>
+  </span>
+</div>
+
+<div id="tuto">
+  <div class="header" (click)="closeTuto()">
+    <i class="fas fa-times"></i>
+  </div>
+  <div class="body">
+    <div id="server-ip">
+      <button (click)="copyIpAddress()" (mouseleave)="onMouseLeaveIpAddress()" data-text-swap="Copié ">Cliquez pour copier l'IP </button>
+    </div>
+    <div class="how-to-connect">
+      <h1>Comment se connecter ?</h1>
+      <img src="./assets/images/minecraft_home_page.png" alt="Page d'accueil du menu minecraft">
+      <img src="./assets/images/minecraft_multiplayer.png" alt="Section multijoueur du menu minecraft">
+      <img src="./assets/images/minecraft_addserver.png" alt="Section multijoueur et ajouter un serveur du menu minecraft">
+    </div>
+  </div>
+</div>
+
+<div id="copyright">
+  Tout droit réservé © Over2Craft 2020-2021 <br/>
+  contact@over2craft.com
+</div>

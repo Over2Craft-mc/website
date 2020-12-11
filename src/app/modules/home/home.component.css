@@ -1,0 +1,282 @@
+#particles-js {
+  z-index: -1;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+#particles-js {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  background-repeat: no-repeat;
+  background-size: 20%;
+  background-position: 50% 50%;
+}
+
+.count-particles {
+  background: #000022;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 80px;
+  color: #13E8E9;
+  font-size: .8em;
+  text-align: left;
+  text-indent: 4px;
+  line-height: 14px;
+  padding-bottom: 2px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+}
+
+.js-count-particles {
+  font-size: 1.1em;
+}
+
+#stats, .count-particles {
+  -webkit-user-select: none;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#stats {
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+.count-particles {
+  border-radius: 0 0 3px 3px;
+}
+
+.spacing {
+  height: 80vh;
+}
+
+@media only screen and (max-width : 1224px) {
+  .spacing {
+    height: 70vh;
+  }
+}
+
+#welcome {
+  font-family: var(--font-family-primary);
+  font-weight: normal;
+  font-style: normal;
+  padding: 1rem;
+  width: 70vw;
+  margin: auto;
+  display: none;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+}
+
+#ip-address {
+  text-align: center;
+}
+
+#ip-address > span {
+  cursor: pointer;
+  display: inline-block;
+  background: var(--minecraft-background);
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  -webkit-border-radius: 13px 13px 13px 13px;
+  -moz-border-radius: 13px 13px 13px 13px;
+  border-radius: 13px 13px 13px 13px;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+
+  -webkit-transition: all 0.5s 0s ease;
+  -moz-transition: all 0.5s 0s ease;
+  -o-transition: all 0.5s 0s ease;
+  transition: all 0.5s 0s ease;
+}
+
+#ip-address > span:hover {
+  padding: 0.5rem;
+  -webkit-border-radius: 40px 40px 40px 40px;
+  -moz-border-radius: 40px 40px 40px 40px;
+  border-radius: 40px 40px 40px 40px;
+}
+
+#ip-address > span > #ip-address-text > span {
+  font-size: calc(var(--font-size) + 3px);
+}
+
+.arrow {
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: width 0.5s ease-in-out, margin 0.5s ease-in-out, border-radius 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+.arrow:hover, .arrow.auto {
+  color: rgba(179, 195, 58, 0);
+  transition: width 0.5s ease-in-out, margin 0.5s ease-in-out, border-radius 1s 0.25 ease-in-out, color 0.25s ease-in-out 0.25s;
+}
+.arrow:hover:before, .arrow.auto:before {
+  animation: tipUp 1s cubic-bezier(0, 0.6, 1, 0.4) infinite 0.5s;
+}
+.arrow:hover:after, .arrow.auto:after {
+  animation: tipUp 1s cubic-bezier(0, 0.6, 1, 0.4) infinite 0.5s;
+}
+.arrow:before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  color: var(--font-color-light);
+  border-top: 5px solid;
+  border-left: 5px solid;
+  transform: rotateZ(45deg);
+  top: 50%;
+  left: 50%;
+  margin-top: -17px;
+  margin-left: -13px;
+  transform: translateY(50px) rotateZ(45deg);
+}
+.arrow:after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  color: var(--font-color-light);
+  border-top: 5px solid;
+  border-left: 5px solid;
+  transform: rotateZ(45deg);
+  top: 50%;
+  left: 50%;
+  margin-top: -6px;
+  margin-left: -13px;
+  transform: translateY(50px) rotateZ(45deg);
+}
+
+@keyframes tipUp {
+  0% {
+    transform: translateY(50px) rotateZ(45deg);
+  }
+  100% {
+    transform: translateY(-70px) rotateZ(45deg);
+  }
+}
+@keyframes lineUp {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(-70px);
+  }
+}
+
+#tuto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 30vh;
+  background: white;
+  z-index: 2;
+}
+
+#tuto {
+  background: var(--minecraft-background);
+}
+
+#tuto > .header {
+  cursor: pointer;
+  font-size: calc(var(--font-size) + 5px);
+  text-align: center;
+  padding: 0.1rem;
+  -webkit-box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.75);
+}
+
+#tuto > body {
+  display: flex;
+  flex-direction: row;
+}
+
+#tuto #server-ip {
+  text-align: center;
+}
+
+#tuto #server-ip > button {
+  cursor: pointer;
+  background: var(--primary-color);
+  font-size: calc(var(--font-size) + 2px);
+  font-family: var(--font-family-primary);
+  color: var(--font-color-light);
+  border: 0;
+  border-radius: 10px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -webkit-transition: all 0.5s 0s ease;
+  -moz-transition: all 0.5s 0s ease;
+  -o-transition: all 0.5s 0s ease;
+  transition: all 0.5s 0s ease;
+  outline: 0;
+}
+
+#tuto #server-ip > button:hover {
+  padding: .7rem 1.2rem .7rem 1.2rem;
+  border-radius: 0;
+}
+
+#tuto #server-ip > button > i {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.5s 0s ease;
+  -moz-transition: all 0.5s 0s ease;
+  -o-transition: all 0.5s 0s ease;
+  transition: all 0.5s 0s ease;
+}
+
+#tuto #server-ip > button:hover:after {
+  font-family: "Font Awesome 5 Free";
+  content:"\f0c5";
+}
+
+#tuto #server-ip > button:focus {
+  content: 'copié';
+  outline: 0;
+}
+
+#tuto .how-to-connect {
+  text-align: center;
+  background: var(--minecraft-background);
+}
+
+#tuto .how-to-connect > img {
+  max-width: 90vw;
+  height: 50vh;
+}
+
+#copyright {
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  z-index: 1;
+}

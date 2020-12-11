@@ -1,0 +1,32 @@
+
+/**
+ Table
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: calc(var(--font-size) - 2px);
+}
+
+main > div {
+  margin-top: 10vh;
+  word-break: break-word;
+}
+
+td, th {
+  border: 1px solid var(--font-color-light);
+  padding: 8px;
+}
+
+tr {
+  background-color: var(--secondary-color);
+}
+
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background: var(--minecraft-background);
+  color: var(--font-color-light);
+}
