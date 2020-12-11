@@ -17,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { DynmapComponent } from './modules/dynmap/dynmap.component';
 import { RulesComponent } from './modules/rules/rules.component';
 import { MoneyComponent } from './modules/money/money.component';
+import { BansComponent } from './modules/bans/bans.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MoneyComponent } from './modules/money/money.component';
     VotesComponent,
     DynmapComponent,
     RulesComponent,
-    MoneyComponent
+    MoneyComponent,
+    BansComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
