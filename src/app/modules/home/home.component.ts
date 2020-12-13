@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit {
 
   public copyIpAddress(): void {
 
-    this.copyTextToClipboard('over2craft.com');
+    this.copyTextToClipboard('play.over2craft.com');
 
     const element: HTMLElement = document.querySelector('#tuto #server-ip > button');
     element.innerHTML = this.copyIpSwapText;
@@ -130,6 +130,10 @@ export class HomeComponent implements OnInit {
     const element: HTMLElement = document.querySelector('#tuto #server-ip > button');
     this.copyIpSwapText = element.getAttribute('data-text-swap');
     this.copyIpInitialText = element.innerHTML;
+
+    if (window.location.hash === '#tuto') {
+      this.openTuto();
+    }
   }
 
 }
