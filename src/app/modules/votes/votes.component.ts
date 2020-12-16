@@ -35,8 +35,8 @@ export class VotesComponent implements OnInit {
   }
 
 // Order by ascending property value
-  valueAscOrder = (a: KeyValue<number,string>, b: KeyValue<number,string>): number => {
-    return a.value.localeCompare(b.value);
+  valueDescOrder = (a: KeyValue<number,string>, b: KeyValue<number,string>): number => {
+    return b.value.localeCompare(a.value);
   }
 
 // Order by descending property key
