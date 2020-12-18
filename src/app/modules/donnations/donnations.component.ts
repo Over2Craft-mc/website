@@ -12,7 +12,7 @@ export class DonnationsComponent implements OnInit {
 
   constructor(private titleService:Title, private sanitizer: DomSanitizer) {
     this.titleService.setTitle('Over2Craft - Faire un don');
-    this.url = this.sanitizer.bypassSecurityTrustResourceUrl('https://over2craft-webstore.tebex.io/' + encodeURI(window.location.hash.substr(1)));
+    this.url = this.sanitizer.bypassSecurityTrustResourceUrl('https://financement.over2craft.com/' + encodeURI(window.location.hash.substr(1)));
   }
   ngOnInit(): void {
   }
