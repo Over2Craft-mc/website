@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {DomSanitizer, SafeResourceUrl, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-donnations',
@@ -8,8 +8,11 @@ import {Title} from '@angular/platform-browser';
 })
 export class DonnationsComponent implements OnInit {
 
-  constructor(private titleService:Title) {
+  public url;
+
+  constructor(private titleService:Title, private sanitizer: DomSanitizer) {
     this.titleService.setTitle('Over2Craft - Faire un don');
+    this.url = this.sanitizer.bypassSecurityTrustResourceUrl('https://over2craft-webstore.tebex.io/' + encodeURI(window.location.hash.substr(1)));
   }
   ngOnInit(): void {
   }
