@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl, Title} from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
 
@@ -9,13 +9,17 @@ import { DOCUMENT } from '@angular/common';
 })
 export class DonnationsComponent implements OnInit {
 
-  public url;
-
-  constructor(private titleService:Title, private sanitizer: DomSanitizer, @Inject(DOCUMENT) private document: Document) {
+  constructor(private titleService: Title, private sanitizer: DomSanitizer, @Inject(DOCUMENT) private document: Document) {
     // this.titleService.setTitle('Over2Craft - Faire un don');
     // this.url = this.sanitizer.bypassSecurityTrustResourceUrl('https://financement.over2craft.com/'
     //   + encodeURI(window.location.hash.substr(1))
     // );
+  }
+
+  public url;
+
+  public static  openInNewTab(): void {
+    window.open('http://financement.over2craft.com', '_blank');
   }
 
   ngOnInit(): void {
