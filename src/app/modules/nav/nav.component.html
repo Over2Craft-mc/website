@@ -2,6 +2,14 @@
   <a class="nav-item-extend" (click)="toggleNav()"><i class="fas fa-bars"></i></a>
   <a routerLink="" class="nav-item-logo"><img src="assets/images/textcraft.png" alt="Page d'accueil" title="Page d'accueil"></a>
   <div id="nav-items">
+    <a [routerLinkActive]="['active']" href="http://financement.over2craft.com" target="_blank" class="nav-item">
+      <span class="mc-icon mc-icon-experience_bottle"></span>
+      Dons et boutique
+    </a>
+    <a routerLink="rules" [routerLinkActive]="['active']" href="/rules" class="nav-item">
+      <span class="mc-icon  mc-icon-minecart_chest"></span>
+      Wiki et Règlement
+    </a>
     <a routerLink="vote" [routerLinkActive]="['active']" href="/vote" class="nav-item">
       <span class="mc-icon mc-icon-trip_wire_source"></span>
       Vote
@@ -14,26 +22,14 @@
       <span class="mc-icon mc-icon-gold_ore"></span>
       Classement de richesse
     </a>
-    <a [routerLinkActive]="['active']" href="http://financement.over2craft.com" target="_blank" class="nav-item">
-      <span class="mc-icon mc-icon-experience_bottle"></span>
-      Dons
-    </a>
-    <a routerLink="rules" [routerLinkActive]="['active']" href="/rules" class="nav-item">
-      <span class="mc-icon  mc-icon-minecart_chest"></span>
-      Règlement
-    </a>
-    <a routerLink="bans" [routerLinkActive]="['active']" href="/bans" class="nav-item">
-      <span class="mc-icon mc-icon-diamond_sword"></span>
-      Sanctions
-    </a>
     <a routerLink="maps" [routerLinkActive]="['active']" href="/maps" class="nav-item">
       <span class="mc-icon mc-icon-dirt_podzol_side"></span>
-      Maps
+      Télécharger les maps
     </a>
     <!--<a class="nav-item">Classement de richesse</a>-->
     <!--<a class="nav-item">Maps</a>-->
-    <a href="/forum/" target="_blank" class="nav-item">
+    <!--<a href="/forum/" target="_blank" class="nav-item">
       <span class="mc-icon  mc-icon-book_writable"></span>
-      Forum</a>
+      Forum</a>-->
   </div>
 </div>
