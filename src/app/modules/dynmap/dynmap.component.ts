@@ -15,7 +15,7 @@ export class DynmapComponent implements OnInit {
   dynmapUrl: SafeUrl;
 
   ngOnInit(): void {
-    this.dynmapUrl = this.sanitizer.bypassSecurityTrustResourceUrl('http://dynmap.over2craft.com');
+    this.dynmapUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://dynmap.over2craft.com');
   }
 
   public switchDmap(url: string): void {
