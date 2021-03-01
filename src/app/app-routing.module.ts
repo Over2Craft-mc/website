@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'vote', component: VotesComponent },
   { path: 'dynmap', component: DynmapComponent },
   { path: 'rules', component: RulesComponent },
+  { path: 'wiki', component: RulesComponent },
   { path: 'money', component: MoneyComponent },
   { path: 'maps', component: HistoryComponent },
   { path: 'bans', component: BansComponent },
