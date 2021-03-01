@@ -1,11 +1,35 @@
 #dynmap {
   position: absolute;
-  margin: 8vh 0 0 0;
+  margin: 14vh 0 0 0;
   padding: 0;
   border: 0;
-  height: 92vh;
+  height: 86vh;
   width: 100vw;
   z-index: 2;
+}
+
+#dynmap-menu {
+  position: absolute;
+  margin: 7.5vh 0 0 0;
+  padding: 0;
+  border: 0;
+  height: 6vh;
+  width: 100vw;
+  z-index: 1;
+  justify-content: center;
+}
+
+#dynmap-menu {
+  text-align: center;
+}
+
+#dynmap-menu > div{
+  padding-top: 10px;
+}
+
+#dynmap-menu > div:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
 }
 
 #background {

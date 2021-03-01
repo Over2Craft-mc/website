@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {Component, OnInit} from '@angular/core';
+import {DomSanitizer, SafeUrl, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-dynmap',
@@ -8,11 +8,18 @@ import {Title} from '@angular/platform-browser';
 })
 export class DynmapComponent implements OnInit {
 
-  constructor(private titleService:Title) {
+  constructor(private titleService: Title, private sanitizer: DomSanitizer) {
     this.titleService.setTitle('Over2Craft - Dynmap Freebuild');
   }
 
+  dynmapUrl: SafeUrl;
+
   ngOnInit(): void {
+    this.dynmapUrl = this.sanitizer.bypassSecurityTrustResourceUrl('http://dynmap.over2craft.com');
+  }
+
+  public switchDmap(url: string): void {
+    this.dynmapUrl = this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
 }

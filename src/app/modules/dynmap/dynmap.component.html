@@ -1,2 +1,8 @@
+
 <div id="background"></div>
-<iframe src="https://dynmap.over2craft.com" id="dynmap"></iframe>
+<div id="dynmap-menu" class="row">
+  <div class="col-3" (click)="switchDmap('http://dynmap.over2craft.com')">Freebuild</div>
+  <div class="col-3" (click)="switchDmap('https://creadynmap.over2craft.com/')" >Créatif</div>
+  <div class="col-3" (click)="switchDmap('https://crea3ddynmap.over2craft.com')" >Créatif 3D</div>
+</div>
+<iframe [src]="dynmapUrl" id="dynmap"></iframe>
