@@ -1,0 +1,52 @@
+<div class="hr-minecraft">
+    <div class="middle"></div>
+    <div class="bottom"></div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <h1>Over2Station</h1>
+    </div>
+
+    <div *ngIf="status && status.source; then emissionInProgess else noEmission"></div>
+    <ng-template #emissionInProgess>
+        <div class="row">
+            <span class="dot dot-green"></span> Emission en cours
+        </div>
+        <div class="row">
+            <h1 class="o2s-title">
+                {{status.source.length ? status.source[0].server_name : status.source.server_name}}
+            </h1>
+        </div>
+    </ng-template>
+    <ng-template #noEmission>
+        <div class="row">
+            <span class="dot dot-red"></span> Aucune émission en cours
+        </div>
+    </ng-template>
+    <div class="row">
+        <script type="text/javascript">
+            MRP.insert({
+                'url': 'http://live.shyndard.eu:8080/live.mp3',
+                'codec': 'mp3',
+                'volume': 100,
+                'autoplay': true,
+                'jsevents': true,
+                'buffering': 0,
+                'title': 'Over2Station',
+                'wmode': 'transparent',
+                'skin': 'mcclean',
+                'width': 180,
+                'height': 60
+            });
+        </script>
+    </div>
+</div>
+
+<div style="height: 25vh"></div>
+
+<div style="position: fixed; bottom: 0; left: 0; right: 0; margin-bottom: -25px">
+    <div class="hr-minecraft">
+        <div class="top"></div>
+    </div>
+</div>
