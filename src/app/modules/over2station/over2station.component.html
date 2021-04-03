@@ -18,21 +18,26 @@
                 {{status.source.length ? status.source[0].server_name : status.source.server_name}}
             </h1>
         </div>
+        <div class="row">
+            <figure>
+                <!-- Set different id to avoid audio cache -->
+                <audio [id]="getRandomId()" controls="true" preload="none">
+                    <source [src]="'https://o2s.shyndard.eu/live.mp3?id=' + getRandomId()" type="audio/mp3">Your browser
+                    does not support the audio element.
+                </audio>
+            </figure>
+        </div>
+        <div class="row">
+            <h3 class="o2s-title">
+                Actuellement {{status.source.length ? status.source[0].listeners : status.source.listeners}} auditeur(s)
+            </h3>
+        </div>
     </ng-template>
     <ng-template #noEmission>
         <div class="row">
             <span class="dot dot-red"></span> Aucune émission en cours
         </div>
     </ng-template>
-    <div class="row">
-        <figure>
-            <!-- Set different id to avoid audio cache -->
-            <audio [id]="getRandomId()" controls [src]="'https://o2s.shyndard.eu/live.mp3?id=' + getRandomId()">
-                Your browser does not support the
-                <code>audio</code> element.
-            </audio>
-        </figure>
-    </div>
 </div>
 
 <div style="height: 25vh"></div>
