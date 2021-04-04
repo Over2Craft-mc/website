@@ -25,7 +25,9 @@ export class Over2stationComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.intervalSub.unsubscribe();
+    if (this.intervalSub) {
+      this.intervalSub.unsubscribe();
+    }
   }
 
   loadStatus(): void {
