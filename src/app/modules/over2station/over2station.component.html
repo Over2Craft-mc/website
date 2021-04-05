@@ -22,7 +22,8 @@
             <figure>
                 <!-- Set different id to avoid audio cache -->
                 <audio [id]="getRandomId()" controls="true" preload="none">
-                    <source [src]="'https://over2station.shyndard.eu/live.mp3?id=' + getRandomId()" type="audio/mp3">Your browser
+                    <source [src]="'https://over2station.shyndard.eu/live.mp3?id=' + getRandomId()" type="audio/mp3">
+                    Your browser
                     does not support the audio element.
                 </audio>
             </figure>
@@ -38,6 +39,12 @@
             <span class="dot dot-red"></span> Aucune émission en cours
         </div>
     </ng-template>
+    <div class="row">
+        <h2>C'est quoi l'over2station ?</h2>
+    </div>
+    <div class="row">
+        <p>L'over2station est une webradio pour over2craft. Elle est utilisée pour organiser des évènements comme des blindtests. Vous pouvez suivre les annonces sur le discord du serveur.</p>
+    </div>
 </div>
 
 <div style="height: 25vh"></div>
