@@ -10,6 +10,6 @@ export class Over2stationService {
   constructor(private http: HttpClient) { }
 
   public getStatus(): Observable<any> {
-    return this.http.get<any>('https://o2s.shyndard.eu/status-json.xsl');
+    return this.http.get<any>('https://over2station.shyndard.eu/status-json.xsl');
   }
 }
