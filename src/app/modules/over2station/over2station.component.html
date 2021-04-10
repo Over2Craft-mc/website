@@ -1,0 +1,56 @@
+<div class="hr-minecraft">
+    <div class="middle"></div>
+    <div class="bottom"></div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <h1>Over2Station</h1>
+    </div>
+
+    <div *ngIf="status && status.source; then emissionInProgess else noEmission"></div>
+    <ng-template #emissionInProgess>
+        <div class="row">
+            <span class="dot dot-green"></span> Emission en cours
+        </div>
+        <div class="row">
+            <h1 class="o2s-title">
+                {{status.source.length ? status.source[0].server_name : status.source.server_name}}
+            </h1>
+        </div>
+        <div class="row">
+            <figure>
+                <!-- Set different id to avoid audio cache -->
+                <audio [id]="getRandomId()" controls="true" preload="none">
+                    <source [src]="'https://over2station.shyndard.eu/live.mp3?id=' + getRandomId()" type="audio/mp3">
+                    Your browser
+                    does not support the audio element.
+                </audio>
+            </figure>
+        </div>
+        <div class="row">
+            <h3 class="o2s-title">
+                Actuellement {{status.source.length ? status.source[0].listeners : status.source.listeners}} auditeur(s)
+            </h3>
+        </div>
+    </ng-template>
+    <ng-template #noEmission>
+        <div class="row">
+            <span class="dot dot-red"></span> Aucune émission en cours
+        </div>
+    </ng-template>
+    <div class="row">
+        <h2>C'est quoi l'over2station ?</h2>
+    </div>
+    <div class="row">
+        <p>L'over2station est une webradio pour over2craft. Elle est utilisée pour organiser des évènements comme des blindtests. Vous pouvez suivre les annonces sur le discord du serveur.</p>
+    </div>
+</div>
+
+<div style="height: 25vh"></div>
+
+<div style="position: fixed; bottom: 0; left: 0; right: 0; margin-bottom: -25px">
+    <div class="hr-minecraft">
+        <div class="top"></div>
+    </div>
+</div>

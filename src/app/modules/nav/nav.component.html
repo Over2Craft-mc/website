@@ -1,6 +1,7 @@
 <div class="nav animate__animated animate__bounce">
   <a class="nav-item-extend" (click)="toggleNav()"><i class="fas fa-bars"></i></a>
-  <a routerLink="" class="nav-item-logo"><img src="assets/images/textcraft.png" alt="Page d'accueil" title="Page d'accueil"></a>
+  <a routerLink="" class="nav-item-logo"><img src="assets/images/textcraft.png" alt="Page d'accueil"
+      title="Page d'accueil"></a>
   <div id="nav-items">
     <a [routerLinkActive]="['active']" href="http://financement.over2craft.com" target="_blank" class="nav-item">
       <span class="mc-icon mc-icon-experience_bottle"></span>
@@ -25,6 +26,10 @@
     <a routerLink="maps" [routerLinkActive]="['active']" href="/maps" class="nav-item">
       <span class="mc-icon mc-icon-dirt_podzol_side"></span>
       Télécharger les maps
+    </a>
+    <a routerLink="over2station" [routerLinkActive]="['active']" href="/over2station" class="nav-item">
+      <span class="mc-icon mc-icon-jukebox_side"></span>
+      Over2Station
     </a>
     <!--<a class="nav-item">Classement de richesse</a>-->
     <!--<a class="nav-item">Maps</a>-->
