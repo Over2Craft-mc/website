@@ -1,5 +1,5 @@
 <!--
-Tout droit réservé © Over2Craft 2020-2021
+Tout droit réservés © Over2Craft 2020-2021
 Mail : contact@over2craft.com
 -->
 <!doctype html>
@@ -22,8 +22,42 @@ Mail : contact@over2craft.com
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" type="text/css" href="assets/css/mc-icons.min.css">
+  <style>
+    #MusesRadioPlayer-HTML5-player-0 {
+      position: fixed !important;
+      z-index: 10000000 !important;
+      bottom: 50px;
+      left: 10px;
+      right: auto;
+      top: auto;
+    }
+
+    @media only screen and (max-width : 1224px) {
+      #MusesRadioPlayer-HTML5-player-0 {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
   <app-root></app-root>
+  <script type="text/javascript" src="https://hosted.muses.org/mrp.js"></script>
+  <script type="text/javascript">
+    MRP.insert({
+      'url':'https://listen.openstream.co/3422/audio',
+      'codec':'mp3',
+      'volume': 5,
+      'autoplay':false,
+      'forceHTML5':true,
+      'jsevents':true,
+      'buffering':0,
+      'title':'Origine HD',
+      'welcome':'Origine HD',
+      'wmode':'transparent',
+      'skin':'compact',
+      'width':191,
+      'height':46
+    });
+  </script>
 </body>
 </html>
