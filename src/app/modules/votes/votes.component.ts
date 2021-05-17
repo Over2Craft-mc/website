@@ -47,6 +47,7 @@ export class VotesComponent implements OnInit {
   public vote(event): void {
     event.preventDefault();
     const input = document.getElementById('player') as HTMLInputElement;
+    document.getElementById('vote-response').innerText = 'Chargement...';
     this.votesService.voteOnMinecraftServerOrg(input.value)
       .subscribe((data) => {
         this.voted(data);
